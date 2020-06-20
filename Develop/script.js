@@ -22,7 +22,6 @@ var Specialcharacters = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", "/", 
 var Uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var collectionValidCharacters = [];
 var pwLength = false; //boolean variable for pwLength to account for situations otherwise 
 var Password = ""; //variable is establish but empty because it will be filled in by the user's input 
  
@@ -39,24 +38,30 @@ var pwLength = Number(prompt("Choose a length between 8 and 128"));
       var needLowercase = confirm("Do you want lower case letters in your password?");
       var needNumbers = confirm("Do you want numbers in your password?");
       
+      //----validation----
+      var collectionValidCharacters = [];
       //if the user confirms "ok" to this prompt, lowercase letters will be added to the collectionValidCharacters array to generate password
       if (needLowercase === true) {
         collectionValidCharacters = collectionValidCharacters.concat(Lowercase);
+        console.log(collectionValidCharacters);
           }
 
       //if the user confirms "ok" to this prompt, uppercase letters will be added to the collectionValidCharacters array to generate password
       if (needUppercase === true) {
         collectionValidCharacters = collectionValidCharacters.concat(Uppercase);
+        console.log(collectionValidCharacters);
             }
 
       //if the user confirms "ok" to this prompt, numbers will be added to the collectionValidCharacters array to generate password
       if (needNumbers === true) {
         collectionValidCharacters = collectionValidCharacters.concat(Numbers);
+        console.log(collectionValidCharacters);
              }
 
       //if the user confirms "ok" to this prompt, special characters will be added to the collectionValidCharacters array to generate password
       if (needSpecialChar === true) {
         collectionValidCharacters = collectionValidCharacters.concat(Specialcharacters);
+        console.log(collectionValidCharacters);
             }
 
    
@@ -65,7 +70,7 @@ var pwLength = Number(prompt("Choose a length between 8 and 128"));
       for (var i = 0; i < pwLength; i++) {
        var randomPassword = collectionValidCharacters[Math.floor(Math.random() * collectionValidCharacters.length)];
      Password = Password + randomPassword
-      //  console.log(Password);
+       console.log(Password);
      }
 
      //calls the function generatePassword to return the value of Password
