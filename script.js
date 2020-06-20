@@ -22,6 +22,7 @@ var Specialcharacters = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", "/", 
 var Uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
 var pwLength = false; //boolean variable for pwLength to account for situations otherwise 
 var Password = ""; //variable is establish but empty because it will be filled in by the user's input 
  
@@ -30,7 +31,7 @@ var pwLength = Number(prompt("Choose a length between 8 and 128"));
 
 //pwLength is user's input but needs to stay between range of 8 and 128 to continue to generate password
   while (pwLength < 8 || pwLength > 128 || pwLength == "") { 
-    pwLength = prompt("Please choose a valid length: Choose a length between 8 and 128")
+    pwLength = Number(prompt("Please choose a valid length: Choose a length between 8 and 128"));
     }
     
       var needSpecialChar = confirm("Do you want special characters in your password?");

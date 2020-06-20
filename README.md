@@ -18,6 +18,7 @@ The password will be generated based on these parameters which is done with a fu
 
 
 
+    https://dlekwjd347.github.io/Elizabeth-RandomPWGenerator/index.html
 
-https://dlekwjd347.github.io/Elizabeth-RandomPWGenerator/
-https://github.com/dlekwjd347/Elizabeth-RandomPWGenerator/
+
+    https://github.com/dlekwjd347/Elizabeth-RandomPWGenerator/
